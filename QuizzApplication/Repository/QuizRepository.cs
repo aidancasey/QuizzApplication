@@ -69,7 +69,7 @@ namespace QuizzApplication.Repository
 
                 foreach (var c in totals)
                 {
-                    result.Answers.Find(d=>d.Id == c.Key).NmberOfVotes = c.count;
+                    result.Answers.Find(d=>d.Id == c.Key).NumberOfVotes = c.count;
                 }
             }
 

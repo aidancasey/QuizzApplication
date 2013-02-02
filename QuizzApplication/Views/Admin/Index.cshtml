@@ -1,5 +1,28 @@
-﻿@{
-    ViewBag.Title = "Results";
+﻿@model QuizzApplication.Models.QuizResultViewModel
+
+
+@using (Html.BeginForm())
+{
+    <h2>Result</h2>
+
+    <div>
+        <table>
+            <tr>
+                <td>Option</td>
+                <td>Number of Votes</td>
+
+                <td>Percent</td>
+            </tr>
+            @foreach (var option in Model.Options)
+            {
+                <tr>
+                    <td>@option.AnswerText</td>
+                    <td>@option.NumberOfVotes</td>
+                    <td>@option.Percent</td>
+                </tr>
+            }
+    
+        </table>
+    </div>
 }
 
-<h2>Results</h2>

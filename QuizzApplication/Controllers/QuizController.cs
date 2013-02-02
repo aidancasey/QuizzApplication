@@ -20,9 +20,9 @@ namespace QuizzApplication.Controllers
             result.QuestionText = question.QuestionText;
             result.Answers = new List<Models.Answer>();
 
-            foreach (var c in question.Answers)
+            foreach (var answer in question.Answers)
             {
-                result.Answers.Add(new Models.Answer { AnswerText = c.Answer1, Id = c.AnswerId });
+                result.Answers.Add(new Models.Answer { AnswerText = answer.Answer1, Id = answer.AnswerId });
             }
 
             return View(result);           
@@ -46,11 +46,6 @@ namespace QuizzApplication.Controllers
 
 
         public ActionResult Thanks()
-        {
-            return View();
-        }
-
-        public ActionResult Results()
         {
             return View();
         }

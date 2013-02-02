@@ -18,6 +18,6 @@ namespace QuizzApplication.Repository
     {
         public int Id { set; get; }
         public string AnswerText { set; get; }
-        public int NmberOfVotes { get; set; }
+        public int NumberOfVotes { get; set; }
     }
 }
