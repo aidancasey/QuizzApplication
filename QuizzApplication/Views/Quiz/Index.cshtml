@@ -1,0 +1,18 @@
+﻿@model QuizzApplication.Models.QuestionViewModel
+
+
+@using (Html.BeginForm())
+{
+<div>
+    @Html.HiddenFor(x => x.Id)
+    <h3> @Model.QuestionText </h3>
+    @foreach (var a in Model.Answers)
+    {
+       <p>
+          @Html.RadioButtonFor(b => b.SelectedAnswer, a.Id)  @a.AnswerText 
+       </p>
+    }
+</div>
+<input  type="submit" value="Submit" name="Submit"/>
+}
+
