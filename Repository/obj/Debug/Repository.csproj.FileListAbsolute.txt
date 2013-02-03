@@ -1,0 +1,6 @@
+C:\Code\roadshowquiz\Quiz\Repository\bin\Debug\Repository.dll.config
+C:\Code\roadshowquiz\Quiz\Repository\bin\Debug\Repository.dll
+C:\Code\roadshowquiz\Quiz\Repository\bin\Debug\Repository.pdb
+C:\Code\roadshowquiz\Quiz\Repository\obj\Debug\ResolveAssemblyReference.cache
+C:\Code\roadshowquiz\Quiz\Repository\obj\Debug\Repository.dll
+C:\Code\roadshowquiz\Quiz\Repository\obj\Debug\Repository.pdb

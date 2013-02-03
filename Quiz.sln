@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizzApplication", "QuizzApplication\QuizzApplication.csproj", "{05BDD949-59E8-4636-8E0F-1AB6EF62A490}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{30F98934-A41A-4113-AB95-9231B7D1C875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{05BDD949-59E8-4636-8E0F-1AB6EF62A490}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05BDD949-59E8-4636-8E0F-1AB6EF62A490}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05BDD949-59E8-4636-8E0F-1AB6EF62A490}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F98934-A41A-4113-AB95-9231B7D1C875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F98934-A41A-4113-AB95-9231B7D1C875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F98934-A41A-4113-AB95-9231B7D1C875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F98934-A41A-4113-AB95-9231B7D1C875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

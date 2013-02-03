@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Web.Mvc;
+using DAL;
 using QuizzApplication.Models;
 using QuizzApplication.Repository;
+
 
 namespace QuizzApplication.Controllers
 {
@@ -35,7 +37,7 @@ namespace QuizzApplication.Controllers
 
             QuizRepository repo = new QuizRepository();
 
-            Repository.QuizResponse response = new QuizResponse();
+            DAL.QuizResponse response = new QuizResponse();
             response.AnswerId = model.SelectedAnswer;
             response.QuestionId = model.Id;
             repo.SaveAnswer(response);

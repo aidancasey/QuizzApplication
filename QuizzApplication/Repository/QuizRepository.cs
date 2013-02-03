@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
+using DAL;
 using QuizzApplication.Repository;
+
 
 namespace QuizzApplication.Repository
 
