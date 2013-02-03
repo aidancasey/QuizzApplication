@@ -13,7 +13,12 @@ namespace QuizzApplication.Controllers
         public ActionResult Index()
         {
             QuizRepository repo = new QuizRepository();
-            var data = repo.GetVotes(1,DateTime.Now.AddHours(-12));
+
+            int quizId = 1;
+            int hoursToAggregateVotes = -12;
+
+
+            var data = repo.GetVotes(quizId,DateTime.Now.AddHours(hoursToAggregateVotes));
             
             QuizResultViewModel results = new QuizResultViewModel();
             
@@ -26,24 +31,22 @@ namespace QuizzApplication.Controllers
                                         {
                                             AnswerText = option.AnswerText,
                                             NumberOfVotes = option.NumberOfVotes,
-                                            Id = option.Id
-                                            
-                                        });
+                                            Id = option.Id                                 
+                                       });
 
             }
 
-            SetPercentages(results);
+            CalculateVotingPercentages(results);
 
             return View(results);   
         }
 
-
-        public void SetPercentages(QuizResultViewModel results)
+        public void CalculateVotingPercentages(QuizResultViewModel results)
         {
             int totalAnswers = (from x in results.Options
                                 select x.NumberOfVotes).Sum();
 
-            //set exact percentage
+            //set exact percentage to 2 decimal places
             
             foreach (var option in results.Options)
             {
@@ -51,9 +54,6 @@ namespace QuizzApplication.Controllers
                 option.Percent = Math.Round(option.Percent, 2, MidpointRounding.AwayFromZero);
 
             }
-
-
-
 
         }
     }

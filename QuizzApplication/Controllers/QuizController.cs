@@ -14,10 +14,14 @@ namespace QuizzApplication.Controllers
 
         public ActionResult Index()
         {
+
+            int quizId = 1;
+
             QuizRepository repo = new QuizRepository();
-            var question = repo.Get(1);
+            var question = repo.GetQuestion(quizId);
 
             QuestionViewModel result = new QuestionViewModel();
+
             result.Id = question.Id;
             result.QuestionText = question.QuestionText;
             result.Answers = new List<Models.Answer>();
@@ -34,6 +38,7 @@ namespace QuizzApplication.Controllers
         [HttpPost]
         public ActionResult Index(QuestionViewModel model)
         {
+            //save result
 
             QuizRepository repo = new QuizRepository();
 
@@ -46,7 +51,7 @@ namespace QuizzApplication.Controllers
             return RedirectToAction("Thanks");
         }
 
-
+        //thank you drive through
         public ActionResult Thanks()
         {
             return View();

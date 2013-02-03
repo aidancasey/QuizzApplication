@@ -9,7 +9,12 @@ namespace QuizzApplication.Repository
 {
     public class QuizRepository
     {
-        public Question Get(int id)
+        /// <summary>
+        /// Gets the question and answers by id
+        /// </summary>
+        /// <param name="questionId"></param>
+        /// <returns></returns>
+        public Question GetQuestion(int questionId)
         {
 
             using (QuizEntities context = new QuizEntities())
@@ -17,7 +22,7 @@ namespace QuizzApplication.Repository
 
                 var question = context.Questions
                                .Include("Answers")
-                               .Where(qn => qn.Id == id)
+                               .Where(qn => qn.Id == questionId)
 
                                .FirstOrDefault();
 
@@ -26,7 +31,10 @@ namespace QuizzApplication.Repository
         }
 
 
-
+        /// <summary>
+        /// Save a single user answer to the db
+        /// </summary>
+        /// <param name="data"></param>
         public void SaveAnswer(QuizResponse data)
         {
             using (QuizEntities context = new QuizEntities())
@@ -45,10 +53,17 @@ namespace QuizzApplication.Repository
 
         }
 
+
+        /// <summary>
+        /// Returns all votes aggregated for a particular date range
+        /// </summary>
+        /// <param name="questionId"></param>
+        /// <param name="startingFrom"></param>
+        /// <returns></returns>
         public QuizResult GetVotes(int questionId, DateTime startingFrom)
         {
 
-             Question question = Get(questionId);
+             Question question = GetQuestion(questionId);
 
 
             QuizResult result = new QuizResult();
