@@ -13,7 +13,7 @@ namespace QuizzApplication.Controllers
         public ActionResult Index()
         {
             QuizRepository repo = new QuizRepository();
-            var data = repo.GetVotes(1,DateTime.Now.AddHours(-30));
+            var data = repo.GetVotes(1,DateTime.Now.AddHours(-12));
             
             QuizResultViewModel results = new QuizResultViewModel();
             
