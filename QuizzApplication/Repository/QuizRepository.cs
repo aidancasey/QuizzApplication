@@ -10,7 +10,7 @@ namespace QuizzApplication.Repository
         public Question Get(int id)
         {
 
-            using (QuizEntities1 context = new QuizEntities1())
+            using (QuizEntities context = new QuizEntities())
             {
 
                 var question = context.Questions
@@ -27,7 +27,7 @@ namespace QuizzApplication.Repository
 
         public void SaveAnswer(QuizResponse data)
         {
-            using (QuizEntities1 context = new QuizEntities1())
+            using (QuizEntities context = new QuizEntities())
             {
 
                 context.QuizResponses.AddObject(new QuizResponse
@@ -59,7 +59,7 @@ namespace QuizzApplication.Repository
             }
 
 
-            using (QuizEntities1 context = new QuizEntities1())
+            using (QuizEntities context = new QuizEntities())
             {
                 var totals =
                     context.QuizResponses.GroupBy(p => p.AnswerId)

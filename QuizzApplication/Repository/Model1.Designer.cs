@@ -29,32 +29,32 @@ namespace QuizzApplication.Repository
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class QuizEntities1 : ObjectContext
+    public partial class QuizEntities : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new QuizEntities1 object using the connection string found in the 'QuizEntities1' section of the application configuration file.
+        /// Initializes a new QuizEntities object using the connection string found in the 'QuizEntities' section of the application configuration file.
         /// </summary>
-        public QuizEntities1() : base("name=QuizEntities1", "QuizEntities1")
+        public QuizEntities() : base("name=QuizEntities", "QuizEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new QuizEntities1 object.
+        /// Initialize a new QuizEntities object.
         /// </summary>
-        public QuizEntities1(string connectionString) : base(connectionString, "QuizEntities1")
+        public QuizEntities(string connectionString) : base(connectionString, "QuizEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new QuizEntities1 object.
+        /// Initialize a new QuizEntities object.
         /// </summary>
-        public QuizEntities1(EntityConnection connection) : base(connection, "QuizEntities1")
+        public QuizEntities(EntityConnection connection) : base(connection, "QuizEntities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
