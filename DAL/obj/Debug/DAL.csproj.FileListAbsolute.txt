@@ -4,3 +4,9 @@ C:\Code\roadshowquiz\Quiz\DAL\bin\Debug\DAL.pdb
 C:\Code\roadshowquiz\Quiz\DAL\obj\Debug\ResolveAssemblyReference.cache
 C:\Code\roadshowquiz\Quiz\DAL\obj\Debug\DAL.dll
 C:\Code\roadshowquiz\Quiz\DAL\obj\Debug\DAL.pdb
+C:\Code\QuizzApplication\DAL\bin\Debug\DAL.dll.config
+C:\Code\QuizzApplication\DAL\bin\Debug\DAL.dll
+C:\Code\QuizzApplication\DAL\bin\Debug\DAL.pdb
+C:\Code\QuizzApplication\DAL\obj\Debug\ResolveAssemblyReference.cache
+C:\Code\QuizzApplication\DAL\obj\Debug\DAL.dll
+C:\Code\QuizzApplication\DAL\obj\Debug\DAL.pdb
